@@ -26,24 +26,16 @@ def delete_user(Email):
     c.execute("DELETE FROM userstable WHERE Email="+"'"+Email+"'")
     conn.commit()
 def set_bg_hack_url():
-    '''
-    A function to unpack an image from url and set as bg.
-    Returns
-    -------
-    The background.
-    '''
-        
+    
     st.markdown(
-          
+          """
           <style>
           .stApp {{
               background: url("https://szmagro.hu/images/s3.jpg");
               background-size: cover
           }}
           </style>
-          """,
-          unsafe_allow_html=True
-      )
+          """,unsafe_allow_html=True)
 set_bg_hack_url()
 
 
